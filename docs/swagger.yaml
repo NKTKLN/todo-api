@@ -1,0 +1,1151 @@
+basePath: /
+definitions:
+  models.ApiError:
+    properties:
+      error:
+        type: string
+    type: object
+  models.ApiListData:
+    properties:
+      comment:
+        example: Products needed for the party
+        type: string
+      name:
+        example: List of products
+        type: string
+    type: object
+  models.ApiMessage:
+    properties:
+      message:
+        type: string
+    type: object
+  models.ApiShowLists:
+    properties:
+      lists:
+        items:
+          $ref: '#/definitions/models.ListsData'
+        type: array
+    type: object
+  models.ApiShowSubtasks:
+    properties:
+      subtasks:
+        items:
+          $ref: '#/definitions/models.SubtasksData'
+        type: array
+    type: object
+  models.ApiShowTasks:
+    properties:
+      tasks:
+        items:
+          $ref: '#/definitions/models.TasksData'
+        type: array
+    type: object
+  models.ApiSubtaskData:
+    properties:
+      comment:
+        example: Sugar-free
+        type: string
+      name:
+        example: Coca-Cola
+        type: string
+      task_id:
+        example: 1023456789
+        type: integer
+    type: object
+  models.ApiTaskData:
+    properties:
+      comment:
+        example: Go to the supermarket on the way home
+        type: string
+      list_id:
+        example: 1023456789
+        type: integer
+      name:
+        example: Buy drinks
+        type: string
+    type: object
+  models.ListEditData:
+    properties:
+      comment:
+        example: Products needed for the party
+        type: string
+      id:
+        example: 1023456789
+        type: integer
+      index:
+        example: 1
+        type: integer
+      name:
+        example: New list of products
+        type: string
+    type: object
+  models.ListsData:
+    properties:
+      comment:
+        example: Products needed for the party
+        type: string
+      id:
+        example: 1023456789
+        type: integer
+      index:
+        example: 0
+        type: integer
+      name:
+        example: List of products
+        type: string
+    type: object
+  models.ShowUserData:
+    properties:
+      id:
+        example: 1023456789
+        type: integer
+      name:
+        example: NKTKLN
+        type: string
+      username:
+        example: nktkln
+        type: string
+    type: object
+  models.SubtaskEditData:
+    properties:
+      categories:
+        example:
+        - Party
+        - Shoping
+        - Today
+        items:
+          type: string
+        type: array
+      comment:
+        example: Sugar-free
+        type: string
+      done:
+        example: true
+        type: boolean
+      end_time:
+        example: 2077-12-10 13:13
+        type: string
+      id:
+        example: 1023456789
+        type: integer
+      index:
+        example: 1
+        type: integer
+      name:
+        example: Pepsi
+        type: string
+      special:
+        example: true
+        type: boolean
+    type: object
+  models.SubtasksData:
+    properties:
+      categories:
+        example:
+        - Party
+        - Shoping
+        items:
+          type: string
+        type: array
+      comment:
+        example: Sugar-free
+        type: string
+      done:
+        type: boolean
+      end_time:
+        example: 2077-12-10 13:13
+        type: string
+      id:
+        example: 1023456789
+        type: integer
+      index:
+        example: 0
+        type: integer
+      name:
+        example: Coca-Cola
+        type: string
+      special:
+        type: boolean
+    type: object
+  models.TaskEditData:
+    properties:
+      categories:
+        example:
+        - Party
+        - Shoping
+        - Today
+        items:
+          type: string
+        type: array
+      comment:
+        example: Go to the supermarket on the way home
+        type: string
+      done:
+        example: true
+        type: boolean
+      end_time:
+        example: 2077-12-10 13:13
+        type: string
+      id:
+        example: 1023456789
+        type: integer
+      index:
+        example: 1
+        type: integer
+      name:
+        example: Buy new drinks
+        type: string
+      special:
+        example: true
+        type: boolean
+    type: object
+  models.TasksData:
+    properties:
+      categories:
+        example:
+        - Party
+        - Shoping
+        items:
+          type: string
+        type: array
+      comment:
+        example: Go to the supermarket on the way home
+        type: string
+      done:
+        type: boolean
+      end_time:
+        example: 2077-12-10 13:13
+        type: string
+      id:
+        example: 1023456789
+        type: integer
+      index:
+        example: 0
+        type: integer
+      name:
+        example: Buy drinks
+        type: string
+      special:
+        type: boolean
+    type: object
+  models.UserData:
+    properties:
+      email:
+        example: nktkln@example.com
+        type: string
+      name:
+        example: NKTKLN
+        type: string
+      password:
+        example: StRon9Pa$$w0rd
+        type: string
+      username:
+        example: nktkln
+        type: string
+    type: object
+  models.UserEmail:
+    properties:
+      email:
+        example: nktkln@example.com
+        type: string
+    type: object
+  models.UserLoginData:
+    properties:
+      email:
+        example: nktkln@example.com
+        type: string
+      password:
+        example: StRon9Pa$$w0rd
+        type: string
+    type: object
+  models.UserName:
+    properties:
+      name:
+        example: NKTKLN
+        type: string
+    type: object
+  models.UserPassword:
+    properties:
+      password:
+        example: StRon9Pa$$w0rd
+        type: string
+    type: object
+  models.UserTokens:
+    properties:
+      access_token:
+        example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzMDE5NDgxODQiLCJleHAiOjE2NTU0MTc4MDF9.ZqPxmPK3qV3VrT4D0wbwN2tMGzAhaH5kQnqr8iePTZA
+        type: string
+      refresh_token:
+        example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzMDE5NDgxODQiLCJleHAiOjE2NTU0MjI1NTh9.S1ypUshOnPB66VJV6RL42cdgYbV8LaGk7zYgL5JlsYg
+        type: string
+    type: object
+  models.UserUsername:
+    properties:
+      username:
+        example: nktkln
+        type: string
+    type: object
+info:
+  contact:
+    email: nktkln@nktkln.com
+    name: API Support
+    url: https://nktkln.com
+  description: some description
+  license:
+    name: MIT
+    url: http://github.com/
+  title: ToDo API
+  version: "1.0"
+paths:
+  /auth/sign-in:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: User data
+        in: body
+        name: LoginData
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserLoginData'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.UserTokens'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      summary: Sign in to your account
+      tags:
+      - Authorization
+  /auth/sign-up:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: User data
+        in: body
+        name: UserData
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserData'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      summary: Register a user
+      tags:
+      - Authorization
+  /auth/verify:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Verification key
+        in: query
+        name: key
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.UserTokens'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      summary: Confirm the new user's email
+      tags:
+      - Authorization
+  /todo/list/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: List data
+        in: body
+        name: ListData
+        required: true
+        schema:
+          $ref: '#/definitions/models.ApiListData'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Create list
+      tags:
+      - Working with lists
+  /todo/list/delete:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: The id of the list to be deleted
+        in: query
+        name: list_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Delete list
+      tags:
+      - Working with lists
+  /todo/list/edit:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: List data
+        in: body
+        name: ListData
+        required: true
+        schema:
+          $ref: '#/definitions/models.ListEditData'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Edit list
+      tags:
+      - Working with lists
+  /todo/list/show:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiShowLists'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Shows all lists created by the user
+      tags:
+      - Working with lists
+  /todo/subtask/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Subtask data
+        in: body
+        name: SubtaskData
+        required: true
+        schema:
+          $ref: '#/definitions/models.ApiSubtaskData'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Create subtask
+      tags:
+      - Working with subtasks
+  /todo/subtask/delete:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: The id of the subtask to be deleted
+        in: query
+        name: subtask_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Delete subtask
+      tags:
+      - Working with subtasks
+  /todo/subtask/edit:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Subtask data
+        in: body
+        name: SubtaskData
+        required: true
+        schema:
+          $ref: '#/definitions/models.SubtaskEditData'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Edit subtask
+      tags:
+      - Working with subtasks
+  /todo/subtask/show:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Task id with subtasks
+        in: query
+        name: task_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiShowSubtasks'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Shows all subtasks in the task
+      tags:
+      - Working with subtasks
+  /todo/task/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Task data
+        in: body
+        name: TaskData
+        required: true
+        schema:
+          $ref: '#/definitions/models.ApiTaskData'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Create task
+      tags:
+      - Working with tasks
+  /todo/task/delete:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: The id of the task to be deleted
+        in: query
+        name: task_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Delete task
+      tags:
+      - Working with tasks
+  /todo/task/edit:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Task data
+        in: body
+        name: TaskData
+        required: true
+        schema:
+          $ref: '#/definitions/models.TaskEditData'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Edit task
+      tags:
+      - Working with tasks
+  /todo/task/show:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: List id with tasks
+        in: query
+        name: list_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiShowTasks'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Shows all tasks in the list
+      tags:
+      - Working with tasks
+  /user/delete/account:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: User password
+        in: query
+        name: password
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Delete user account
+      tags:
+      - User settings
+  /user/delete/icon:
+    delete:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Delete user icon
+      tags:
+      - User settings
+  /user/settings/reset/email:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: New user email
+        in: body
+        name: NewUserEmail
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserEmail'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Reset user email
+      tags:
+      - User settings
+  /user/settings/reset/password:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: User data
+        in: body
+        name: UserEmail
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserEmail'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.UserTokens'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      summary: Reset user password
+      tags:
+      - User settings
+  /user/settings/update/email:
+    patch:
+      consumes:
+      - application/json
+      parameters:
+      - description: Veryfication key
+        in: query
+        name: key
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      summary: Update user email
+      tags:
+      - User settings
+  /user/settings/update/icon:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: User icon
+        in: formData
+        name: icon
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Update user icon
+      tags:
+      - User settings
+  /user/settings/update/name:
+    patch:
+      consumes:
+      - application/json
+      parameters:
+      - description: User name
+        in: body
+        name: NewUserName
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserName'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Change user name
+      tags:
+      - User settings
+  /user/settings/update/password:
+    patch:
+      consumes:
+      - application/json
+      parameters:
+      - description: User password
+        in: body
+        name: NewUserPassword
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserPassword'
+      - description: Veryfication key
+        in: query
+        name: key
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.UserTokens'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      summary: Update user password
+      tags:
+      - User settings
+  /user/settings/update/token:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Refresh token
+        in: header
+        name: refresh_token
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.UserTokens'
+      summary: Update user token
+      tags:
+      - User settings
+  /user/settings/update/username:
+    patch:
+      consumes:
+      - application/json
+      parameters:
+      - description: Username
+        in: body
+        name: NewUsername
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserUsername'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ApiMessage'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Change user username
+      tags:
+      - User settings
+  /user/show/data-by-id:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: User id
+        in: query
+        name: user_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ShowUserData'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      summary: Get basic user data
+      tags:
+      - Show user data
+  /user/show/data-by-token:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ShowUserData'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      security:
+      - token: []
+      summary: Get basic user data
+      tags:
+      - Show user data
+  /user/show/icon:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: User id
+        in: query
+        name: user_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ApiError'
+      summary: Get user icon
+      tags:
+      - Show user data
+securityDefinitions:
+  token:
+    in: header
+    name: token
+    type: apiKey
+swagger: "2.0"

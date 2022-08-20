@@ -1,0 +1,34 @@
+api:
+  port: 80
+  jwt:
+    access-secret: "VeRy$eCrEt@nDc0mPlEx@cCe$$T0KeN"
+    refresh-secret: "VeRy$eCrEt@nDc0mPlExReFrE$Ht0kEn"
+
+smtp:
+  email: "test@test.com"
+  password: "mysecretpassword"
+  server: "smtp.google.com"
+  port: 465
+
+databases:
+  postgres:
+    host: "postgres"
+    port: 5432
+    password: "mysecretpassword"
+    user: "postgres"
+    db-name: "postgres"
+
+  redis:
+    host: "redis"
+    port: 6379
+    password: "mysecretpassword"
+    email-db: 0
+    access-token-db: 1
+    refresh-token-db: 2
+
+  minio:
+    host: "minio"
+    port: 9000
+    user: "minio"
+    password: "mysecretpassword"
+    ssl: false
