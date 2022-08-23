@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<head>
-    <style>
-
-    </style>
-</head>
-<body>
-    <h1>verification</h1>
-    <p>{{.verificationCode}}</p>
-</body>
+<html>
+    <head>
+        <style>
+            body {
+                font-family:arial,sans-serif!important;
+            }
+            .text {
+                font-size:30px;
+                font-weight: bold;
+            }
+            .line {
+                width:550px;
+                margin:40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div align="center" style="font-size:20px;">
+            <p class="text">Verify your email address</p>
+            Your email confirmation code:
+            <p class="text">{{.verificationCode}}</p>
+            If you haven't started registering on site, just ignore this message.
+            <hr class="line">
+            2022 © | Created with ❤️ by <a href="https://nktkln.com" style="color:black;">NKTKLN</a>
+        </div>
+    </body>
 </html>
