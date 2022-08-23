@@ -3,6 +3,7 @@ package redis
 import (
 	"context"
 	"encoding/json"
+	"strconv"
 	"time"
 
 	"github.com/google/uuid"
@@ -12,11 +13,20 @@ import (
 
 func (c *RedisClients) AddEmailData(ctx context.Context, data interface{}) (key string, err error) {
 	// Create a temporary access key to verify mail fidelity and then send it
-	key = uuid.NewString()
+	for {
+		key = strconv.Itoa(int(uuid.New().ID()))
+
+		val, err := c.EmailClient.Get(ctx, key).Result()
+		if err != nil || val == "" {
+			break
+		}
+	}
+
 	err = c.EmailClient.Set(ctx, key, data, 15*time.Minute).Err()
 	if err != nil {
 		return
 	}
+
 	return
 }
 
