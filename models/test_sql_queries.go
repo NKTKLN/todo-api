@@ -47,7 +47,6 @@ const (
 
 	SqlDeleteTask = `DELETE FROM "tasks" WHERE "tasks"."id" = $1`
 
-	// TODO: replace Edit to Upload
 	// Edit
 	SqlEditUserName     = `UPDATE "users" SET "name"=$1 WHERE "users"."id" = $2`
 	SqlEditUserIcon     = `UPDATE "users" SET "icon"=$1 WHERE id = $2`

@@ -16,7 +16,7 @@ databases:
     port: 5432
     password: "mysecretpassword"
     user: "postgres"
-    db-name: "postgres"
+    db-name: "tododb"
 
   redis:
     host: "redis"
