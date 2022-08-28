@@ -31,7 +31,7 @@ import (
 // @name                        token
 
 // @license.name  MIT
-// @license.url   http://github.com/
+// @license.url   https://github.com/NKTKLN/todo-api/blob/main/LICENSE
 
 // @BasePath  /
 func main() {

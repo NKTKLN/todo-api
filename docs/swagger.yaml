@@ -293,7 +293,7 @@ info:
   description: some description
   license:
     name: MIT
-    url: http://github.com/
+    url: https://github.com/NKTKLN/todo-api/blob/main/LICENSE
   title: ToDo API
   version: "1.0"
 paths:

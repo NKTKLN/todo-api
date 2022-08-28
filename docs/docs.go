@@ -17,7 +17,7 @@ const docTemplate = `{
         },
         "license": {
             "name": "MIT",
-            "url": "http://github.com/"
+            "url": "https://github.com/NKTKLN/todo-api/blob/main/LICENSE"
         },
         "version": "{{.Version}}"
     },
