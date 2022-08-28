@@ -19,6 +19,8 @@ RUN apk add --no-cache ca-certificates && update-ca-certificates
 COPY --from=builder /go/src/github.com/NKTKLN/todo-api/ /usr/bin/todo-api/
 WORKDIR /usr/bin/todo-api/
 
-EXPOSE 80
+## Add the wait script to the image
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.9.0/wait /wait
+RUN chmod +x /wait
 
-CMD ["./app"]
+EXPOSE 80
